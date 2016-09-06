@@ -11,7 +11,7 @@ import com.example.aditya.notesapp.data.module.NetModule;
  * Created by Aditya on 06-Sep-16.
  */
 
-public class NoteApp extends Application{
+public class NoteApp extends Application {
     private static NetComponent mNetComponent;
 
     @Override
@@ -19,7 +19,7 @@ public class NoteApp extends Application{
         super.onCreate();
         mNetComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("http://notesapp.mybluemix.net/"))
+                .netModule(new NetModule("http://notesapp.mybluemix.net/api/"))
                 .build();
     }
 

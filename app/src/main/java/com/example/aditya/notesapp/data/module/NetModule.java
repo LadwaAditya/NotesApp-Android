@@ -17,6 +17,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
 
 /**
  * Created by Aditya on 06-Sep-16.
@@ -71,4 +72,6 @@ public class NetModule {
                 .build();
         return retrofit;
     }
+
+
 }
