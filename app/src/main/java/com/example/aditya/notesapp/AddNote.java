@@ -1,5 +1,6 @@
 package com.example.aditya.notesapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -59,6 +60,7 @@ public class AddNote extends AppCompatActivity implements View.OnClickListener {
                         @Override
                         public void onCompleted() {
                             Log.d(TAG, "Complete");
+                            startActivity(new Intent(AddNote.this, MainActivity.class));
                         }
 
                         @Override

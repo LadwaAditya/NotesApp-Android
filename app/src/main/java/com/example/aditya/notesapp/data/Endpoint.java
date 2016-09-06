@@ -12,7 +12,7 @@ import rx.Observable;
  */
 
 public interface Endpoint {
-    @GET("/notes")
+    @GET("notes")
     Observable<List<Note>> getNotes();
 
     @POST("notes")
