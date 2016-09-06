@@ -1,5 +1,6 @@
 package com.example.aditya.notesapp.data.component;
 
+import com.example.aditya.notesapp.AddNote;
 import com.example.aditya.notesapp.MainActivity;
 import com.example.aditya.notesapp.data.module.AppModule;
 import com.example.aditya.notesapp.data.module.NetModule;
@@ -16,4 +17,6 @@ import dagger.Component;
 public interface NetComponent {
 
     void inject(MainActivity activity);
+
+    void inject(AddNote addNote);
 }
