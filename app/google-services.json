@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "147577607126",
+    "firebase_url": "https://notesapp-40325.firebaseio.com",
+    "project_id": "notesapp-40325",
+    "storage_bucket": "notesapp-40325.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147577607126:android:d890bcf2e7714236",
+        "android_client_info": {
+          "package_name": "com.example.aditya.notesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147577607126-a5v6b70qqs4qldsmlpvaf9tmrkc90221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF-Qm_LQvsywT9f79Yb1ximRXxfza4df0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
