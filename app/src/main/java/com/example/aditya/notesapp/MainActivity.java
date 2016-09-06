@@ -6,18 +6,22 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.aditya.notesapp.data.AddNote;
-
 import java.util.ArrayList;
+
+import javax.inject.Inject;
+
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView mListView;
     ArrayList<String> mList;
-    ArrayAdapter<String> mAdapter;
+
+
+    @Inject
+    Retrofit mRetrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

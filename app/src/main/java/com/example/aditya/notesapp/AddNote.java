@@ -1,4 +1,4 @@
-package com.example.aditya.notesapp.data;
+package com.example.aditya.notesapp;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
