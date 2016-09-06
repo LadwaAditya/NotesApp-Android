@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.my_list);
 
         //Inject Dependency
-        ((NoteApp) getApplicationContext()).getNetComponent().inject(this);
+
+        NoteApp.getNetComponent().inject(this);
 
         mList = new ArrayList<>();
 

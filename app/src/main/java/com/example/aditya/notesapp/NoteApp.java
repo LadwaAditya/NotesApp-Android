@@ -12,7 +12,7 @@ import com.example.aditya.notesapp.data.module.NetModule;
  */
 
 public class NoteApp extends Application{
-    private NetComponent mNetComponent;
+    private static NetComponent mNetComponent;
 
     @Override
     public void onCreate() {
@@ -23,7 +23,7 @@ public class NoteApp extends Application{
                 .build();
     }
 
-    public NetComponent getNetComponent() {
+    public static NetComponent getNetComponent() {
         return mNetComponent;
     }
 }
