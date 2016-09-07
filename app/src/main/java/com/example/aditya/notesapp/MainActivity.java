@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Log.d(TAG, "Auth error");
         }
 
+
         push = MFPPush.getInstance();
         push.initialize(getApplicationContext(), "f54a78a7-8e23-450d-a6c6-b2553945acba");
 
