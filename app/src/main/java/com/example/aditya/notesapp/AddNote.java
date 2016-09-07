@@ -60,7 +60,6 @@ public class AddNote extends AppCompatActivity implements View.OnClickListener {
                         @Override
                         public void onCompleted() {
                             Log.d(TAG, "Complete");
-                            startActivity(new Intent(AddNote.this, MainActivity.class));
                             finish();
                         }
 

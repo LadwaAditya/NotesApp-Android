@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'Aditya'
+            keyPassword 'mynameisadi111'
+            storeFile file('E:/Aditya/WorkSpace/Android_Studio/NotesApp/app/NoteApp.jks')
+            storePassword 'mynameisadi111'
+        }
+    }
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     defaultConfig {
@@ -18,7 +26,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     packagingOptions {
         exclude 'LICENSE.txt'
         exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
@@ -27,31 +34,32 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     //Retrofit
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     //OkHttp
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okio:okio:1.7.0'
-
     //Gson
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.1'
-
     //RxJava
     compile 'io.reactivex:rxjava:1.1.2'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
-
     //Dagger
     apt 'com.google.dagger:dagger-compiler:2.2'
     compile 'com.google.dagger:dagger:2.2'
     provided 'javax.annotation:jsr250-api:1.0'
+//    compile 'com.ibm.mobilefirstplatform.clientsdk.android:googleauthentication:2.2.2'
 
-//    compile "com.jakewharton:butterknife:8.1.0"
-//    apt "com.jakewharton:butterknife-compiler:8.1.0"
-
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+            name: 'push',
+            version: '2.+',
+            ext: 'aar',
+            transitive: true
+    //    compile "com.jakewharton:butterknife:8.1.0"
+    //    apt "com.jakewharton:butterknife-compiler:8.1.0"
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -59,4 +67,4 @@ dependencies {
     compile 'com.android.support:design:24.2.0'
     testCompile 'junit:junit:4.12'
 }
-apply plugin: 'com.google.gms.google-services'
+
