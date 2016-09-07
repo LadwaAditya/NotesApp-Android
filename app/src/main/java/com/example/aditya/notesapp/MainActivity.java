@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -165,7 +167,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
         @Override
         public void onReceive(final MFPSimplePushNotification message) {
-            Log.d(TAG, message.getAlert());
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this)
+                    .setSmallIcon(R.drawable.common_ic_googleplayservices)
+                    .setContentTitle(getString(R.string.app_name))
+                    .setContentText(message.getAlert());
+
+            NotificationManagerCompat.from(MainActivity.this).notify(1,builder.build());
         }
     };
 
